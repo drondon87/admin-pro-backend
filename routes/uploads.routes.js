@@ -7,6 +7,6 @@ const router = Router();
 router.use(fileUpload());
 
 router.put('/:tipo/:id', validarJWT, cargarArchivo);
-router.get('/:tipo/:foto', validarJWT, obtenerImagen);
+router.get('/:tipo/:foto', obtenerImagen);
 
 module.exports = router;
