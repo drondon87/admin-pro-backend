@@ -24,14 +24,14 @@ const UsuarioSchema = Schema({
     },
     google: {
         type: Boolean,
-        default: true
+        default: false
     }
 });
 
 UsuarioSchema.method('toJSON', function() {
     const { _v, _id, password, ...object } = this.toObject();
 
-    object.udi = _id;
+    object.uid = _id;
 
     return object;
 });
